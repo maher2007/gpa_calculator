@@ -2,7 +2,7 @@ from PIL import Image
 import streamlit as st
 
 logo = Image.open("silver_shine_image_1.png")
-col1, col2, col3,  = st.columns([1, 5,1])
+col1, col2, col3,  = st.columns([1, 12,5])
 with col1:
     st.image(logo, use_container_width=True )
 with col2:
