@@ -2,7 +2,7 @@ from PIL import Image
 import streamlit as st
 
 logo = Image.open("silver_shine_image_1.png")
-col1, col2, col3,  = st.columns([2, 4,1])
+col1, col2, col3,  = st.columns([1, 5,1])
 with col1:
     st.image(logo, use_container_width=True )
 with col2:
@@ -15,8 +15,8 @@ cridits = []
 grade = []
 course_name = []
 for i in range (course_no):
-    course_name.append(st.text_input("course name", key=(f"n{i}"))) 
-    cridits.append(st.slider("enter cridit hours",0,4,1, key = (f"c{i}")))
+    course_name.append(st.text_input("Course name", key=(f"n{i}"))) 
+    cridits.append(st.slider("enter Credit hours",0,4,1, key = (f"c{i}")))
     grade.append(st.selectbox("Choose a grade", ["A+","A","B+", "B","C+", "C","D+", "D", "F"], key = (f"ch{i}")))
     st.write("------------------------------------")
 mark = {"A+": 4,"A": 3.75,"B+": 3.5, "B":3,"C+":2.5, "C":2,"D+":1.5, "D":1, "F":0}
