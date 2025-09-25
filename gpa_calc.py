@@ -29,6 +29,3 @@ if st.button("Calculate GPA"):
         total_score += mark[grade[i]] * cridits[i]
         total_cridits += cridits[i]
     st.title(f"your gpa is: {total_score/total_cridits}")
-
-
-st.write("Theme base:", st.config.get_option("theme.base"))
