@@ -23,4 +23,4 @@ if st.button("Calculate GPA"):
     for i in range (course_no):
         total_score += mark[grade[i]] * cridits[i]
         total_cridits += cridits[i]
-    st.title(f"your gpa is: {total_score/total_cridits}")
+    st.title(f"your gpa is: {total_score/total_cridits:.2f}")
