@@ -2,11 +2,12 @@ from PIL import Image
 import streamlit as st
 
 logo = Image.open("silver_shine_image_1.png")
-
-
-st.image(logo, width = 100 )
-st.title("GPA Calculator")
-st.write("𝕸𝖆𝖉𝖊 𝖇𝖞: 𝕸𝖆𝖍𝖊𝖗 𝕯𝖆𝖌𝖊𝖘𝖙𝖆𝖓𝖎")
+col1, col2,  = st.columns([2,4])
+with col1:
+    st.image(logo, width=100 )
+with col2:
+    st.title("GPA Calculator")
+    st.write("𝕸𝖆𝖉𝖊 𝖇𝖞: 𝕸𝖆𝖍𝖊𝖗 𝕯𝖆𝖌𝖊𝖘𝖙𝖆𝖓𝖎")
 
 course_no = st.number_input("Enter the number of courses", min_value=1, max_value=20, step=1)
 i = 0
